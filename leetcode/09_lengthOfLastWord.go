@@ -25,7 +25,6 @@ import (
 func lengthOfLastWord(s string) int {
 	s = strings.TrimSpace(s)
 	str := strings.Split(s," ")
-	fmt.Printf("str: %s, len: %d, cut-1: %s\n", str, len(str)-1,str[len(str)-1])
 	if str != nil {
 		fmt.Printf("29\n")
 		return len(str[len(str)-1])
