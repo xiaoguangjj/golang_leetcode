@@ -31,12 +31,14 @@ import (
 )
 
 func sortedSquares(A []int) []int{
-	B := []int{}		//定义新数组B，作为拓展和排序
+	//B := []int{}		//定义新数组B，作为拓展和排序
+	B := make([]int, len(A)) //定义跟A数组相同长度，节省空间
 	for _,value := range A{
 		B = append(B, value * value)	//给数组B添加新元素
 	}
 	sort.Ints(B)	//整数数组排序
 	return B
+
 }
 
 func main()  {
