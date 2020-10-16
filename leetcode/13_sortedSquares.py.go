@@ -30,29 +30,16 @@ import (
 	"sort"
 )
 
-//学生成绩结构体
-type StuScore struct {
-	//姓名
-	name  string
-	//成绩
-	score int
-}
-
-
 func sortedSquares(A []int) []int{
-	type StuScores []StuScore
-
-
-	B := []int{}
+	B := []int{}		//定义新数组B，作为拓展和排序
 	for _,value := range A{
-		B = append(B, value * value)
+		B = append(B, value * value)	//给数组B添加新元素
 	}
-	sort.Ints(B)
-
+	sort.Ints(B)	//整数数组排序
 	return B
 }
 
 func main()  {
-	var A = []int{-4, -1, 0, 3, 10}
-	fmt.Printf("%v",sortedSquares(A))
+	var A = []int{-4, -1, 0, 3, 10}	// 定义数组
+	fmt.Printf("%v",sortedSquares(A))	//打印返回值数组
 }
